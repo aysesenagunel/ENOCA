@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arama</title>
+    <link rel="stylesheet" href="search.component.css">
+</head>
+<body>
+    <div class="search-container">
+        <h2>Haber Arama</h2>
+      
+        <!-- Arama Kutusu -->
+        <div class="search-box">
+          <input 
+            type="text" 
+            [(ngModel)]="searchTerm" 
+            (input)="onSearchChange()" 
+            placeholder="Haber arayın..." 
+            autofocus
+          />
+        </div>
+      
+        <!-- Arama Sonuçları -->
+        <div class="search-results" *ngIf="filteredArticles.length > 0">
+          <div *ngFor="let article of filteredArticles" class="article-item">
+            <h3>{{ article.title }}</h3>
+            <img [src]="article.urlToImage" alt="Haber Resmi" />
+            <p>{{ article.description }}</p>
+            <a [href]="article.url" target="_blank">Devamını Oku</a>
+          </div>
+        </div>
+      
+        <!-- Arama Sonucu Yoksa Mesajı -->
+        <div class="no-results" *ngIf="filteredArticles.length === 0">
+          <p>Aradığınız kriterlere uygun haber bulunamadı.</p>
+        </div>
+      </div>
+      
+</body>
+</html>

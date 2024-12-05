@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Anasayfa</title>
+    <link rel="stylesheet" href="home.component.css">
+</head>
+
+<body>
+    <header>
+        <div class="header-container">
+            <div class="header-left">
+                <h1>AYŞE SENA GÜNEL</h1>
+            </div>
+            <div class="header-right">
+                <input type="text" placeholder="Haber ara...">
+            </div>
+        </div>
+        <nav class="navbar">
+            <ul>
+                <li><a href="http://127.0.0.1:5500/src/app/home/home.component.html">Ana sayfa</a></li>
+                <li><a href="http://127.0.0.1:5500/src/app/about/about.component.html" target="_blank">Hakkımda</a></li>
+                <li><a routerLink="/category/business">Business</a></li>
+                <li><a routerLink="/category/technology">Technology</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Slider Section -->
+    <section class="slider-container">
+        <div class="slider">
+            <div class="slider-item">
+                <img src="news.urlToImage" alt="news.title">
+                <h2>news.title </h2>
+                <p>news.description</p>
+                <a href="news.url" target="_blank">Devamını Oku</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- News Section -->
+    <main>
+        <div class="news-list">
+            <div class="news-item">
+                <img src="news.urlToImage" alt="news.title">
+                <h3>news.title</h3>
+                <p>news.description</p>
+                <a href="news.url" target="_blank">Devamını Oku</a>
+            </div>
+        </div>
+    </main>
+
+    <!-- Pagination Section -->
+    <div class="pagination">
+        <button>Önceki</button>
+        <button>Sonraki</button>
+    </div>
+
+    <footer>
+        <p>© 2024 Tüm Hakları Saklıdır.</p>
+    </footer>
+
+</body>
+
+</html>

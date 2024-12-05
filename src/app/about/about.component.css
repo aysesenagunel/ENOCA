@@ -1,0 +1,141 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
+
+
+:root {
+    --light-background: hsl(215, 51%, 70%);
+    --main-color: hsl(178, 100%, 50%);
+    --new-main-color: hsl(178, 93%, 47%);
+    --dark-background: hsl(217, 54%, 11%);
+    --card-background: hsl(216, 50%, 16%);
+    --new-card-background: hsl(215, 45%, 27%);
+    --neutral-line: hsl(215, 32%, 27%);
+    --normal-white: hsl(0, 0%, 100%);
+}
+
+
+* {
+   padding: 0;
+   margin: 0;
+   font-family: 'Lato', sans-serif;
+   box-sizing: border-box;
+}
+
+body {
+    background-color: var(--dark-background);
+    color: var(--normal-white);
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+
+nav {
+    background-color: var(--light-background);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 100px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+nav img {
+    background-color: transparent;
+    width: 120px;
+    border-radius: 30px;
+}
+
+nav h1 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    text-align: center;
+    color: var(--dark-background);
+}
+
+nav p {
+    font-size: 1.1rem;
+    font-weight: 500;
+    text-align: center;
+    max-width: 800px;
+    margin: 10px 0;
+    line-height: 1.8;
+}
+
+
+main {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 40px 10%;
+}
+
+.left, .right {
+    width: 48%;
+    padding: 15px;
+    background-color: var(--card-background);
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+}
+
+
+h4 {
+    color: var(--new-card-background);
+    font-weight: 700;
+    margin-bottom: 10px;
+    font-size: 1.3rem;
+}
+
+h4:hover {
+    text-decoration: underline;
+    color: var(--main-color);
+}
+
+
+ul {
+    list-style: none;
+    padding-left: 20px;
+}
+
+ul li {
+    margin-bottom: 12px;
+    font-weight: 500;
+    cursor: pointer;
+}
+
+ul li:hover {
+    color: var(--main-color);
+    text-decoration: underline;
+}
+
+
+a {
+    color: var(--main-color);
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+
+@media (max-width: 768px) {
+    main {
+        padding: 20px 5%;
+    }
+
+    .left, .right {
+        width: 100%;
+    }
+
+    nav {
+        flex-direction: column;
+    }
+
+    nav h1 {
+        font-size: 2rem;
+    }
+
+    nav p {
+        font-size: 1rem;
+    }
+}
